@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="favorites-list">
+    <ng-template [ngIf]="favorites.length > 0" [ngIfElse]="no_items">
+      <app-comic-card *ngFor="let comic of favorites" [comic]="comic"></app-comic-card>
+    </ng-template>
+  </div>
+  <ng-template #no_items>
+    <div class="no-items">
+      <h1>You don't have favorites yet.</h1>
+    </div>
+  </ng-template>
+</div>

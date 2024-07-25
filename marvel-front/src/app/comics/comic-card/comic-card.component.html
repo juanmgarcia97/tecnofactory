@@ -1,0 +1,6 @@
+<div class="comic" style="background-color: lightblue;" (click)="goToComicDescription()">
+  <div [ngStyle]="{'height': noImage ? '250px': 'fit-content', 'align-content': noImage ? 'center': ''}">
+    <img [src]="comic.imageUrl" />
+  </div>
+  <p class="title">{{ comic.title }}</p>
+</div>

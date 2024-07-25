@@ -1,0 +1,12 @@
+.comics-list {
+  grid-area: main;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 0.5rem;
+}
+
+.no-items {
+  justify-self: center;
+  align-self: center;
+}

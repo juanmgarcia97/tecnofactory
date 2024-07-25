@@ -1,0 +1,15 @@
+<app-header>
+  <button routerLink="">Home</button>
+  <ng-template [ngIf]="!isLogged" [ngIfElse]="logged">
+    <button routerLink="/login">Login</button>
+  </ng-template>
+  <ng-template #logged>
+    <button routerLink="/comics">Comics</button>
+    <button routerLink="/favorites">Favorites</button>
+    <button routerLink="/login">Logout</button>
+  </ng-template>
+</app-header>
+<div class="marvel-app">
+  <router-outlet></router-outlet>
+</div>
+<app-footer></app-footer>

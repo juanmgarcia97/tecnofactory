@@ -1,0 +1,27 @@
+.comic-wrapper {
+  display: flex;
+  margin: 2rem 3rem;
+  padding: 1rem 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 280px;
+  border-radius: 7px;
+  margin: 0 3rem;
+}
+
+.info-text {
+  h1 {
+    text-align: center;
+  }
+  p {
+    text-align: justify;
+  }
+}
+
+.actions {
+  display: flex;
+  justify-content: right;
+}

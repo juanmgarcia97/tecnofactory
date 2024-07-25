@@ -1,0 +1,12 @@
+<div class="main">
+  <div class="comics-list">
+    <ng-template [ngIf]="displayComics.length > 0" [ngIfElse]="no_items">
+      <app-comic-card *ngFor="let comic of displayComics" [comic]="comic"></app-comic-card>
+    </ng-template>
+  </div>
+  <ng-template #no_items>
+    <div class="no-items">
+      <h1>No comics found</h1>
+    </div>
+  </ng-template>
+</div>

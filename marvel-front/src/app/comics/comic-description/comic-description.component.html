@@ -1,0 +1,33 @@
+<div class="comic-description">
+  <ng-template [ngIf]="isFavorite" [ngIfElse]="backToFavorites">
+    <button routerLink="/comics">Return to comics</button>
+  </ng-template>
+  <ng-template #backToFavorites>
+    <button routerLink="/favorites">Return to favorites</button>
+  </ng-template>
+  <div class="comic-wrapper">
+    <img [src]="comic.imageUrl" alt="">
+    <div class="comic-info">
+      <div class="info-text">
+
+        <h1>{{comic.title}}</h1>
+        <p>{{comic.description}}</p>
+        <h4>Creators</h4>
+        <ul *ngFor="let creator of comic.creators">
+          <li>{{creator}}</li>
+        </ul>
+        <span>Price: {{comic.price | currency: 'USD':'symbol'}}</span>
+      </div>
+      <ng-template [ngIf]="isFavorite" [ngIfElse]="favorite">
+        <div class="actions">
+          <button (click)="saveToFavorites()">Add to favorite</button>
+        </div>
+      </ng-template>
+      <ng-template #favorite>
+        <div class="actions">
+          <button (click)="deleteFromFavorites()">Delete favorite</button>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
